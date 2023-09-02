@@ -1,3 +1,5 @@
+import nltk
+nltk.download('stopwords')
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -7,6 +9,7 @@ from collections import Counter
 from resParse.resParseCode.resume_parser import ResumeParser
 import base64
 import re
+
 
 # Set page configuration and title
 st.set_page_config(page_title="ResuMate - Aryans", page_icon=":bar_chart:", layout="wide")
