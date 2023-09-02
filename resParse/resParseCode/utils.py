@@ -4,6 +4,7 @@ import io
 import os
 import re
 import nltk
+nltk.download('stopwords')
 import pandas as pd
 import docx2txt
 from datetime import datetime

@@ -106,7 +106,7 @@
                 "\u2022 Coordinated internship and placement drive of more than 2000 students as Company Coordinator at SPO, IITK"
             ],
             "no_of_pages": 1,
-            "test_score": 0.0
+            "test_score": 95.0
         },
         {
             "Name": "SPANDAN SENAPATI",
@@ -330,6 +330,108 @@
                 "Senior Writer, Vox Populi: Discussed and wrote articles about opportunities and obstacles related to campus",
                 "Secretary, E-Cell: Anchored in one of the events of E-Summit and wrote short articles for publicising events.",
                 "Management Senior Executive, Techkriti: Conducted Techkriti Open School Championship for students in Bhopal.",
+                "i"
+            ],
+            "no_of_pages": 1
+        },
+        {
+            "Name": "Sampada Sinha",
+            "Email": "samsinha@iitk.ac.in",
+            "Mobile number": "+91-9685978269",
+            "College name": "Indian Institute of Technology, Kanpur",
+            "Degree": "B.Tech(ChE)",
+            "CPI": 8.7,
+            "Skills": [
+                "\u2022 Programming Languages: C, C++, MATLAB, Python \u2022 Utilities: MySQL, Tensor\ufb02ow, Scikit-learn, MS Excel, LATEX"
+            ],
+            "Experience": [
+                "Detection of Heavy Metals, SURGE\u201920 | Prof Siddhartha Panda",
+                "July\u201920-Present"
+            ],
+            "Projects": [
+                "Image Processing in Finance | Finance and Analytics Club",
+                "May\u201920-July\u201920",
+                "Emotion Recognition | Brain and Cognitive Society",
+                "* Predicted and analysed the future returns of a stock by implementing CNN Model using extracted time-series data",
+                "* Labelled data as buy, sell or hold and created images from time series using the normalised values of technical parameters",
+                "* Evaluated performance of CNN by two di\ufb00erent criteria: Computational Model Performance and Financial Evaluation",
+                "* Superimposed the proposed model on a single stock (Axis Bank) to analyse performance on the real world \ufb01nancial scenario",
+                "May\u201920-July\u201920",
+                "* Detected involuntary emotional response occurring with con\ufb02icting emotions using Facial Expression to identify true emotion",
+                "* Implemented attentional neural network and obtained an accuracy of 56.98% on FER2013 dataset and 60% on JAFFE dataset",
+                "* Ensembled CNNs consisiting of 5 trained and 2 custom models that were least correlated and represented second network",
+                "* Improved accuracy of FER2013 dataset to 76.86% and JAFFE dataset to 97.14% using ensemble network of CNN models",
+                "Position of Responsibility",
+                "UG Academics Manager | Academics and Career Council",
+                "Apr\u201920-Present"
+            ],
+            "Designation": null,
+            "Courses": [
+                "*Online",
+                "Non-Core",
+                "Applied Probability and Statistics, Fundamentals of Computing, Linear Algebra and Di\ufb00erential Equation,",
+                "Neural Networks and Deep Learning*, Python Financial Analytics*",
+                "Engineering Computational Methods in Engineering, Manufacturing Processes (I and II), Introduction to Electronics",
+                "Core",
+                "Chemical Engineering Thermodynamics, Fluid Mechanics, Process Calculation"
+            ],
+            "Position of responsibilities": [
+                "Social",
+                "Student Guide: Mentored 5 students on emotional and academic fronts for smooth transition in college.",
+                "Writing",
+                "Senior Writer, Vox Populi: Discussed and wrote articles about opportunities and obstacles related to campus",
+                "Secretary, E-Cell: Anchored in one of the events of E-Summit and wrote short articles for publicising events.",
+                "Management Senior Executive, Techkriti: Conducted Techkriti Open School Championship for students in Bhopal.",
+                "i"
+            ],
+            "no_of_pages": 1
+        },
+        {
+            "Name": "Prince Pratap",
+            "Email": "pratappr@iitk.ac.in",
+            "Mobile number": "+91-9617403398",
+            "College name": "Indian Institute of Technology, Kanpur",
+            "Degree": "B.Tech",
+            "CPI": 8.01,
+            "Skills": [
+                "Corporate Finance Essentials**",
+                "Fundamentals of Computing",
+                "Partial Di\ufb00erential Equation",
+                "Basic Statistic, Data Analysis and Inference",
+                "Financial Modeling**",
+                "(*Ongoing **Online)"
+            ],
+            "Experience": [
+                "\u2022 Research Intern at Angel Broking Pvt. Ltd.",
+                "(Apr 2020-Jun 2020 )",
+                "\u2013 Formulated crossover and breakout strategy based on MA and MACD indicators in python",
+                "\u2013 Backtested and analyzed the strategies on portfolio of stocks on last 20 years end of day data",
+                "\u2013 Worked on the optimization of strategy involving around 500 combinations of time window and",
+                "came up with the time window with optimal metric",
+                "\u2022 Sub Head , Strategy Development at Metvy Net Pvt. Ltd.",
+                "(Mar 2020-Jul 2020 )",
+                "\u2013 Spearheaded the 1st edition of Metvy Case Study Challenge generating revenue of Rs 20,300",
+                "\u2013 Outperformed and promoted to Sub-head in a span of one month",
+                "\u2013 Explored multiple revenue models pertaining to how various business \ufb01rms run their business",
+                "\u2013 Actively involved in cost modelling and strategizing exercises to supply fresh ideas on fund raising"
+            ],
+            "Projects": [
+                "\u2022 Summer Project: Portfolio Optimization Using ML Models",
+                "(Summer Project 2019 )",
+                "Mentor: Finance Discussion Group, IITK",
+                "\u2013 Employed various data cleaning techniques for feature selection from the given dataset and scraped the",
+                "stock data of companies from various sectors to eliminate the speci\ufb01c risk of the portfolio",
+                "\u2013 Applied modern portfolio theory to achieve the optimal weights for maximum sharpe ratio and",
+                "minimum variance portfolios",
+                "\u2013 Achieved an accuracy of 92% to generate optimal weights for a group of assets and mean squared",
+                "error of 0.77 in predicting the stock prices using various ML models"
+            ],
+            "Designation": null,
+            "Courses": null,
+            "Position of responsibilities": [
+                "\u2022 Attended workshop on data analytics and quantitative aptitude by Prepleaf",
+                "\u2022 Participant of volleyball team in Institute Summer Sports Camp 2019",
+                "\u2022 Represented the school as a part of school volleyball team in CBSE clusters 2017",
                 "i"
             ],
             "no_of_pages": 1

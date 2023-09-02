@@ -1,8 +1,12 @@
-# Resume Parser
+# ResuMate Miner - Aryans
 
 ```
-A simple resume parser used for extracting information from resumes
+A simple resume miner used for extracting information from resumes
 ```
+
+# Deployed Site
+
+- Link to the deployed site : http://aryans.tech/
 
 # Features
 
@@ -37,17 +41,11 @@ pip install https://github.com/explosion/spacy-models/releases/download/en_core_
 
 pip install pyresparser
 
+pip install matplotlib
+
 #we are using streamlit to display page
 pip install streamlit
 ```
-
-# Documentation
-
-Official documentation is available at: 
-
-# Supported File Formats
-
-- PDF on all Operating Systems
 
 # Usage
 
@@ -56,90 +54,126 @@ Official documentation is available at:
 - Use below command to launch the site
 
 ```bash
-
+streamlit run app.py
 ```
 
-# CLI
+# Supported File Formats
 
-For running the resume extractor you can also use the `cli` provided
-
-```bash
-usage: pyresparser [-h] [-f FILE] [-d DIRECTORY] [-r REMOTEFILE]
-                   [-re CUSTOM_REGEX] [-sf SKILLSFILE] [-e EXPORT_FORMAT]
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -f FILE, --file FILE  resume file to be extracted
-  -d DIRECTORY, --directory DIRECTORY
-                        directory containing all the resumes to be extracted
-  -r REMOTEFILE, --remotefile REMOTEFILE
-                        remote path for resume file to be extracted
-  -re CUSTOM_REGEX, --custom-regex CUSTOM_REGEX
-                        custom regex for parsing mobile numbers
-  -sf SKILLSFILE, --skillsfile SKILLSFILE
-                        custom skills CSV file against which skills are
-                        searched for
-  -e EXPORT_FORMAT, --export-format EXPORT_FORMAT
-                        the information export format (json)
-```
-
-# Notes:
-
-- If you are running the app on windows, then you can only extract .docs and .pdf files
+- PDF on all Operating Systems
 
 # Result
 
 The module would return a list of dictionary objects with result as follows:
 
-```
-[
-  {
-    'college_name': ['Marathwada Mitra Mandal’s College of Engineering'],
-    'company_names': None,
-    'degree': ['B.E. IN COMPUTER ENGINEERING'],
-    'designation': ['Manager',
-                    'TECHNICAL CONTENT WRITER',
-                    'DATA ENGINEER'],
-    'email': 'omkarpathak27@gmail.com',
-    'mobile_number': '8087996634',
-    'name': 'Omkar Pathak',
-    'no_of_pages': 3,
-    'skills': ['Operating systems',
-              'Linux',
-              'Github',
-              'Testing',
-              'Content',
-              'Automation',
-              'Python',
-              'Css',
-              'Website',
-              'Django',
-              'Opencv',
-              'Programming',
-              'C',
-              ...],
-    'total_experience': 1.83
-  }
+```json
+"applicants": [
+        {
+            "Name": "Chitwan Goel",
+            "Email": "chitwang21@iitk.ac.in",
+            "Mobile number": "+91-7310826277",
+            "College name": "Indian Institute of Technology Kanpur",
+            "Degree": "Bachelor of Technology",
+            "CPI": 9.73,
+            "Skills": [
+                "\u2022 Programming Skills",
+                "C",
+                "C++",
+                "Python",
+                "Bash script",
+                "Verilog HDL",
+                "MIPS assembly language",
+                "Dart*",
+                "\u2022 Frameworks/Libraries",
+                "Numpy",
+                "Pandas",
+                "Matplotlib",
+                "Keras",
+                "Tensorflow",
+                "Sklearn",
+                "Selenium",
+                "Gradio",
+                "Flutter*",
+                "\u2022 Web",
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "ReactJS",
+                "NodeJS",
+                "Express",
+                "TypeScript",
+                "MongoDB",
+                "NextJS",
+                "Firebase*",
+                "\u2022 Miscellaneous",
+                "Git",
+                "LATEX",
+                "AutoCAD",
+                "Tkinter",
+                "Google Colab",
+                "Jupyter Notebook",
+                "Pinecone",
+                "Qdrant",
+                "Weaviate"
+            ],
+            "Experience": [
+                "AI Intern, AI Northstar Tech",
+                "(May \u201923 - Jul \u201923 )",
+                "\u2022 Conducted extensive research on state-of-the-art AI techniques, and used it to solve real-world problems",
+                "\u2022 Curated terabyte-scale image dataset through web scraping using Selenium, for multiple semantic search engines",
+                "\u2022 Developed a prototype web app for searching and browsing the dataset using images and text as input",
+                "\u2022 Integrated embeddings from large multi-modal models like CLIP, and transformer models like ViT, into",
+                "the prototype, using Huggingface hub and transformers library",
+                "Full Stack Developer Intern, Vizuara",
+                "(Mar \u201923 - Jul \u201923 )",
+                "\u2022 Developed a full-stack MERN course portal, featuring integrated payment gateway and user authentication",
+                "\u2022 Implemented a search system using TensorFlow.js, enabling advanced search based on semantic understanding",
+                "\u2022 Automated an uploading process to Firebase, drastically reducing the time required from hours to seconds",
+                "\u2022 Created an innovative resume generation portal utilizing AI and human expertise for polished resumes"
+            ],
+            "Projects": [
+                "CSE Bubble (cid:135) (CS220 Course Project)",
+                "Mentor: Professor Urbi Chatterjee (CSE, Indian Institute of Technology Kanpur)",
+                "(Mar \u201923 - Apr \u201923 )",
+                "\u2022 Implemented CSE-BUBBLE processor with separate 32-bit sized Instruction and Data Memory sections",
+                "\u2022 Developed op-code formats and modules for instruction handling, including ALU and branching operations",
+                "\u2022 Generated machine code for Bubble Sort from MIPS code, and stored output in data memory through simulation",
+                "What\u2019s Next (cid:135) (CS253 Course Project)",
+                "Mentor: Professor Indranil Saha (CSE, Indian Institute of Technology Kanpur)",
+                "(Jan \u201923 - Apr \u201923 )",
+                "\u2022 Developed an event management MERN app for IITK, featuring registration, like/dislike functionality & notification",
+                "\u2022 Created an intuitive interface with interactive elements like event details pages, and personalized user dashboards",
+                "\u2022 Integrated a payment portal enabling organizers to make direct seamless payments to Lecture Hall Complex",
+                "Jal Jeevan Mission (Water-Life Mission)",
+                "Mentor: Professor Priyanka Bagade (CSE, Indian Institute of Technology Kanpur)",
+                "(Nov \u201922 - Apr \u201923 )",
+                "\u2022 Contributed to a government-funded project addressing water pipe leakage detection using sensors and hydrophones",
+                "\u2022 Extensively analyzed state-of-the-art techniques and integrated hardware and software approaches in the project",
+                "\u2022 Simulated a water pipeline to collect data and employed KNN-SVM ensemble methods, for accurate predictions"
+            ],
+            "Designation": null,
+            "Courses": [
+                "A*: Exceptional Performance",
+                "*Basic Knowledge",
+                "*: Ongoing",
+                "Data Structures & Algorithms (A*)",
+                "Discrete Mathematics for Computer Science",
+                "Real Analysis and Multivariable Calculus",
+                "Introduction to Machine Learning*",
+                "Computer Organization (A*)",
+                "Probability for Computer Science",
+                "Linear Algebra and ODE",
+                "Operating Systems*",
+                "Fundamentals of Computing",
+                "Logic for Computer Science",
+                "Software Development and Ops",
+                "Image Processing*"
+            ],
+            "Position of responsibilities": [
+                "\u2022 Leading the website development as Web Head at Techkriti, IITK, providing guidance to the team of executives",
+                "\u2022 Coordinated internship and placement drive of more than 2000 students as Company Coordinator at SPO, IITK"
+            ],
+            "no_of_pages": 1,
+            "test_score": 95.0
+        }
 ]
 ```
-
-# References that helped me get here
-
-- [https://www.kaggle.com/nirant/hitchhiker-s-guide-to-nlp-in-spacy](https://www.kaggle.com/nirant/hitchhiker-s-guide-to-nlp-in-spacy)
-
-- [https://www.analyticsvidhya.com/blog/2017/04/natural-language-processing-made-easy-using-spacy-%E2%80%8Bin-python/](https://www.analyticsvidhya.com/blog/2017/04/natural-language-processing-made-easy-using-spacy-%E2%80%8Bin-python/)
-
-- [https://medium.com/@divalicious.priya/information-extraction-from-cv-acec216c3f48](https://medium.com/@divalicious.priya/information-extraction-from-cv-acec216c3f48)
-
-- **Special thanks** to dataturks for their [annotated dataset](https://dataturks.com/blog/named-entity-recognition-in-resumes.php)
-
-# Donation
-
-If you have found my softwares to be of any use to you, do consider helping me pay my internet bills. This would encourage me to create many such softwares :smile:
-
-| PayPal | <a href="https://paypal.me/omkarpathak27" target="_blank"><img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg" alt="Donate via PayPal!" title="Donate via PayPal!" /></a> |
-|:-------------------------------------------:|:-------------------------------------------------------------:|
-| ₹ (INR)  | <a href="https://www.instamojo.com/@omkarpathak/" target="_blank"><img src="https://www.soldermall.com/images/pic-online-payment.jpg" alt="Donate via Instamojo" title="Donate via instamojo" /></a> |
-
-# Stargazer over time
-[![Stargazers over time](https://starchart.cc/OmkarPathak/pyresparser.svg)](https://starchart.cc/OmkarPathak/pyresparser)

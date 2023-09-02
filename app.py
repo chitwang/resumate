@@ -29,7 +29,7 @@ if selected_option == 'Resume Parser':
     
     with col1:
         st.subheader("Upload Your Resume")
-        uploaded_file = st.file_uploader("Drag and drop a file here", type=["pdf", "docx"])
+        uploaded_file = st.file_uploader("Drag and drop a file here", type=["pdf"])
     
         if uploaded_file:
             st.write("Uploaded file:", uploaded_file.name)
@@ -206,7 +206,8 @@ elif selected_option == 'Analytics':
         # Combine all skills into a single list
         all_skills = []
         for skills_list in applicants_df['Skills']:
-            all_skills.extend(skills_list)
+            if skills_list is not None:
+                all_skills.extend(skills_list)
 
         # Count the frequency of each skill
         skills_counter = Counter(all_skills)
@@ -254,17 +255,19 @@ elif selected_option == 'Analytics':
             # Count the number of projects or experiences
             regex_pattern = r'(?:Jan|January|Feb|February|Mar|March|Apr|April|May|Jun|June|Jul|July|Aug|August|Sep|September|Oct|October|Nov|November|Dec|December)[ ]?[\'’]\d{2,4}'
             matched_counts = []
+            
             for experience_list in applicants_df['Experience']:
                 # Initialize count for each applicant
                 applicant_count = 0
-                for experience in experience_list:
-                    # Replace \u2019 with a regular single quote ' in the experience text
-                    cleaned_experience = experience.replace('\u2019', "’")
-                    # Use regex to find matches
-                    if re.search(regex_pattern, cleaned_experience):
-                        applicant_count += 1
-                # Append the count to the matched_counts list
-                matched_counts.append(applicant_count)
+                if experience_list is not None:
+                    for experience in experience_list:
+                        # Replace \u2019 with a regular single quote ' in the experience text
+                        cleaned_experience = experience.replace('\u2019', "’")
+                        # Use regex to find matches
+                        if re.search(regex_pattern, cleaned_experience):
+                            applicant_count += 1
+                    # Append the count to the matched_counts list
+                    matched_counts.append(applicant_count)
 
             # Add the matched_counts list as a new column 'score' in the DataFrame
             applicants_df['Experience'] = matched_counts
@@ -288,7 +291,7 @@ else:
     applicants_df = pd.DataFrame(data['applicants'])
 
     # Calculate the ranking score based on criteria
-    applicants_df['score'] = (applicants_df['CPI'] * 0.5) + (applicants_df['Skills'].apply(len) * 0.2)
+    applicants_df['score'] = (applicants_df['CPI'] * 0.8) + (applicants_df['Skills'].apply(len) * 0.2)
     regex_pattern = r'(?:Jan|January|Feb|February|Mar|March|Apr|April|May|Jun|June|Jul|July|Aug|August|Sep|September|Oct|October|Nov|November|Dec|December)[ ]?[\'’]\d{2,4}'
     matched_counts = []
 
@@ -296,14 +299,15 @@ else:
     for experience_list in applicants_df['Experience']:
         # Initialize count for each applicant
         applicant_count = 0
-        for experience in experience_list:
-            # Replace \u2019 with a regular single quote ' in the experience text
-            cleaned_experience = experience.replace('\u2019', "’")
-            # Use regex to find matches
-            if re.search(regex_pattern, cleaned_experience):
-                applicant_count += 1
-        # Append the count to the matched_counts list
-        matched_counts.append(applicant_count*0.1)
+        if experience_list is not None:
+            for experience in experience_list:
+                # Replace \u2019 with a regular single quote ' in the experience text
+                cleaned_experience = experience.replace('\u2019', "’")
+                # Use regex to find matches
+                if re.search(regex_pattern, cleaned_experience):
+                    applicant_count += 1
+            # Append the count to the matched_counts list
+            matched_counts.append(applicant_count*0.1)
 
     # Add the matched_counts list as a new column 'score' in the DataFrame
     applicants_df['score'] = applicants_df['score'] + matched_counts
